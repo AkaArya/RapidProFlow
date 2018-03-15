@@ -1,0 +1,568 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token" content="uRru0D35QLqFu1saDMIqwguACC9F2PMPRX0CquyF">
+
+        <title>XOinfo: leave no one behind</title>
+        <script src="http://www.xoinfo.org/front/lib/js/jquery.min.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://www.xoinfo.org/front/lib/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="http://www.xoinfo.org/front/lib/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="http://www.xoinfo.org/front/lib/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="http://www.xoinfo.org/front/lib/css/common.css">
+        <link rel="stylesheet" type="text/css" href="http://www.xoinfo.org/front/lib/css/responsive.css">
+
+
+        <!--[if !IE]><!-->
+        <link rel="stylesheet" type="text/css" href="http://www.xoinfo.org/front/lib/css/not-ie.css">
+            <!--<![endif]-->
+
+        <script src="http://www.xoinfo.org/front/lib/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/treemap.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+
+
+
+
+        <script src="http://www.xoinfo.org/front/lib/js/my_data.js"></script>
+        <script src="http://www.xoinfo.org/front/lib/js/helper.js"></script>
+        <script type="text/javascript">
+            var baseurl = 'http://www.xoinfo.org';
+
+        </script>
+
+        <style type="text/css">
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family: "segoeuil", "seguisb", "segoeui", "Segoe UI Light", "Segoe UI Semilight", "Segoe UI" !important;
+                 overflow: auto;
+                margin-bottom:20px;
+            }
+
+            tspan{
+                  text-decoration:none;
+                  text-shadow:none !important;
+              }
+              table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+        </style>
+
+
+ </head>
+
+    <body class="bg-grey">
+
+     <!--group and filter-->
+        <div id="group" class="row group clearfix box-shadow bs btb padding5 bg_lb justify-center">
+          <div class="module" id="rs-carousel">
+            <ul id="itemsWrapper" class="list-unstyled list-inline margin-zero text-center justify-between">
+                <li><a href="javascript:void(0);" id="myDataTable" data-charttype="table" class="display"><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-10.svg" alt="Data Table"  data-toggle="tooltip" data-placement="bottom" title="Data Table" ></a></li>
+                <li><a href="javascript:void(0);" id="myDataLine" data-charttype="line" class="loadchart"><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-03.svg" alt="Line"  data-toggle="tooltip" data-placement="bottom" title="Line" ></a></li>
+                <li><a href="javascript:void(0);" id="myDataColumn" data-charttype="column" class="loadchart"><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-12.svg" alt="Column"  data-toggle="tooltip" data-placement="bottom" title="Column" ></a></li>
+                <li><a href="javascript:void(0);" id="myDataBar" data-charttype="bar" class="loadchart"><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-11.svg" alt="Bar"  data-toggle="tooltip" data-placement="bottom" title="Bar" ></a></li>
+                <li><a href="javascript:void(0);" id="myDataPie" data-charttype="pie" class="loadchart"><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-05.svg" alt="Pie"  data-toggle="tooltip" data-placement="bottom" title="Pie"></a></li>
+                <!-- <li><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/grey/web_icons-08.svg" alt="Pyramid"  data-toggle="tooltip" data-placement="bottom" title="Pyramid"></li> -->
+                <!-- <li><a href="javascript:void(0);" id=""><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/grey/web_icons-04.svg" alt="Bubble"  data-toggle="tooltip" data-placement="bottom" title="Bubble"></a></li> -->
+                <!--<li><a href="javascript:void(0);" id="myDataRadar" data-charttype="radar" ><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-01.svg" alt="Radar"  data-toggle="tooltip" data-placement="bottom" title="Radar"></a></li>-->
+                <li><a href="javascript:void(0);" id="myDataTreemap" data-charttype="treemap" class="loadchart"><img src="http://www.xoinfo.org/front/lib/images/svg/charts_set/blue/web_icons-06.svg" alt="Treemap"  data-toggle="tooltip" data-placement="bottom" title="Treemap"></a></li>
+
+            </ul>
+          </div>
+
+        </div>
+
+
+
+
+        <!--group and filter end-->
+        <div class="container-fluid ">
+          <div class="row ">
+            <div class="col-xs-12  padding-zero ">
+              <div class="width-100">
+                <section id="myvisualizationsteps" class="clearfix">
+                  <div class="">
+                    <div class="heading-icon"><img src="">
+                      <h1>RapidPro</h1>
+                    </div>
+                    <hr>
+<div class="col-xs-12 bg-red text-white text-center plr-0"><p>Form:</p>
+                       <select id="questionList">
+
+       {% for item in model %}
+{% if item.flow_type in 'S' %}
+                           <option value="" selected disabled hidden>Choose here</option>
+            <option value="{{item.id}}">{{item.name}}
+            </option>
+{% endif %}
+       {% endfor %}
+
+</select>
+<br>
+<p>Question:</p>
+      <select id="List">
+
+           <option value="'+s+'" selected="selected" id="aggre">s</option>
+
+          </select>
+<br>
+    <br>
+<button type="button" class="display">Next</button>
+    <br>
+    <button type="button" name="" value="Open Window" ONCLICK="window.open('http://192.168.1.12:8000/flow/')">Simulator</button>
+
+</div>
+     <div id="viz1" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
+     <div id="viz" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+                    <!--<section class="mydata_1 clearfix mydata_all mx-3" id="upload_my_data">-->
+                      <!--<div class="col-xs-12 plr-0 mb-3 hide">-->
+                        <!--<h3>Upload data</h3>-->
+                      <!--</div>-->
+                      <!--<div class="justify-between-sm-only w-100 my-4">-->
+                        <!--<div class="col-xs-12 bg-red text-white text-center plr-0">-->
+                        <!--<a href="javascript:void(0)" data-toggle="modal" data-target="#csv_download" class="question_icon_tr"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>-->
+
+
+
+
+<!--&lt;!&ndash;-->
+    <!--<form method="post" action="https://css-tricks.com/examples/DragAndDropFileUploading//?" enctype="multipart/form-data" novalidate class="box">-->
+
+
+        <!--<div class="box__input">-->
+            <!--<svg class="box__icon" xmlns="http://www.w3.org/2000/svg" width="50" height="43" viewBox="0 0 50 43"><path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"/></svg>-->
+            <!--<input type="file" name="files[]" id="file" class="box__file" data-multiple-caption="{count} files selected" multiple />-->
+            <!--<label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>-->
+            <!--<button type="submit" class="box__button">Upload</button>-->
+        <!--</div>-->
+
+
+        <!--<div class="box__uploading">Uploading&hellip;</div>-->
+        <!--<div class="box__success">Done! <a href="https://css-tricks.com/examples/DragAndDropFileUploading//?" class="box__restart" role="button">Upload more?</a></div>-->
+        <!--<div class="box__error">Error! <span></span>. <a href="https://css-tricks.com/examples/DragAndDropFileUploading//?" class="box__restart" role="button">Try again!</a></div>-->
+    <!--</form> &ndash;&gt;-->
+
+
+
+
+
+                          <!--<form method="post" action="?submit-on-demand" enctype="multipart/form-data" novalidate class="box-droping has-advanced-upload">-->
+                            <!--<div class="box-droping__input box__input">-->
+                              <!--<svg class="box-droping__icon"     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="18px"-->
+                                     <!--viewBox="296 387 20 18" enable-background="new 296 387 20 18" xml:space="preserve">-->
+                                <!--<title>69 - Upload (Solid)</title>-->
+                                <!--<desc>Created with Sketch.</desc>-->
+                                <!--<g sketch:type="MSPage">-->
+                                    <!--<g sketch:type="MSLayerGroup">-->
+                                        <!--<path sketch:type="MSShapeGroup" d="M301.862,393.275c0.176,0,0.353-0.066,0.487-0.201l2.961-2.961v11.438-->
+                                            <!--c0,0.381,0.309,0.69,0.689,0.69s0.689-0.31,0.689-0.69v-11.438l2.961,2.961c0.135,0.135,0.311,0.201,0.487,0.201-->
+                                            <!--s0.354-0.066,0.488-0.201c0.269-0.27,0.269-0.706,0-0.976l-4.138-4.137c-0.032-0.032-0.067-0.061-0.105-0.086-->
+                                            <!--c-0.017-0.012-0.036-0.02-0.054-0.03c-0.021-0.012-0.042-0.024-0.064-0.034c-0.023-0.01-0.047-0.015-0.07-0.022-->
+                                            <!--c-0.02-0.005-0.038-0.013-0.058-0.017c-0.089-0.018-0.181-0.018-0.271,0c-0.02,0.004-0.039,0.012-0.058,0.017-->
+                                            <!--c-0.023,0.007-0.047,0.012-0.07,0.022c-0.023,0.009-0.043,0.022-0.065,0.034c-0.018,0.01-0.037,0.018-0.054,0.029-->
+                                            <!--c-0.038,0.025-0.074,0.054-0.105,0.086l-4.138,4.137c-0.27,0.27-0.27,0.706,0,0.976-->
+                                            <!--C301.509,393.209,301.686,393.275,301.862,393.275"/>-->
+                                        <!--<path sketch:type="MSShapeGroup" d="M315.311,399.482c-0.381,0-0.689,0.309-0.689,0.69v3.448h-17.242v-3.448-->
+                                            <!--c0-0.382-0.309-0.69-0.69-0.69c-0.38,0-0.689,0.309-0.689,0.69V405h20v-4.827C316,399.791,315.691,399.482,315.311,399.482"/>-->
+                                    <!--</g>-->
+                                <!--</g>-->
+                                <!--</svg>-->
+                              <!--<input type="file" name="files[]" id="file" class="box-droping__file" data-multiple-caption="{count} files selected" multiple />-->
+                              <!--<label for="file"><strong class="btn-browse">Upload Your CSV data</strong>&lt;!&ndash; <span class="box-droping__dragndrop"> or Drag and drop your data here</span>. &ndash;&gt;</label>-->
+                              <!--&lt;!&ndash;<button type="submit" class="box-droping__button">Upload</button>&ndash;&gt;-->
+                              <!--</div>-->
+                            <!--<div class="box-droping__uploading">Uploading&hellip;</div>-->
+                            <!--<div class="box-droping__success">Done! <a href="?submit-on-demand" class="box-droping__restart" role="button">Upload more?</a></div>-->
+                            <!--<div class="box-droping__error">Error! <span></span> <a href="?submit-on-demand" class="box-droping__restart" role="button">Try again!</a></div>-->
+                          <!--</form>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-1 hidden-xs">-->
+                          <!--<div class="no-background-h"><span><span>or</span></span></div>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-12 p-3 bg-white">-->
+                          <!--<a href="javascript:void(0)" data-toggle="modal" data-target="#csv_download" class="question_icon_tr"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>-->
+
+                          <!--<textarea class="form-control comment" name="excel_data" rows="5" id="excel_data" placeholder="Paste your Excel data here"></textarea>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="col-xs-12 text-center  mb-3">-->
+                        <!--<hr>-->
+                        <!--<button class="btn btn-red" id="nextStep" onclick="javascript:generateTable()" disabled="disabled">Next</button>-->
+                      <!--</div>-->
+                    <!--</section>-->
+
+<!-- <section class="mydata_2 clearfix" id="">
+                      <div class="col-xs-12 plr-0 mb-3">
+                        <h3>Map columns</h3>
+                      </div>
+                      <div class="col-xs-12 plr-0">
+<select name="area1" id="" class="myDataHeading custom-select"><option value="">Select</option><option value="area_code">Area Id</option><option value="name">Area Name</option><option value="year">Time Period</option></select>
+    </div>
+<div class="col-xs-12 text-center mb-3">
+                        <hr>
+                        <button class="btn btn-grey btn-border mr-mb-3">Previous</button>
+                        <button class="btn btn-red" id="">Next</button>
+                      </div>
+</section> -->
+
+
+
+
+                    <section class="mydata_2 clearfix hide mydata_all" id="select_region_section">
+                      <div class="col-xs-12 plr-0 mb-3">
+                        <h3>Select Map Database </h3>
+                      </div>
+                      <div class="col-xs-12 plr-0">
+
+
+
+
+                        <!-- <select id="map_database" class="custom-select" name="map_database">
+                            <option value="">Select</option>
+                            <option value="africa">Africa</option>
+                            <option value="india">India</option>
+                        </select> -->
+
+
+
+                         <select id="map_database" class="custom-select" name="map_database"><option value="un_aids">UN Aids</option></select>
+
+
+                      </div>
+                        <div class="col-xs-12 text-center mb-3 ">
+                        <hr>
+
+                        <button class="btn btn-red" onclick="javascript:selectDatabase()">Next</button>
+                      </div>
+<div class="col-xs-12 plr-0  ">
+
+                        </div>
+                    </section>
+
+
+
+
+
+
+
+
+                    <!--<section class="clearfix hide mydata_all" id="generated_table">-->
+                      <!--<div class="col-xs-12 plr-0 mb-3">-->
+                        <!--&lt;!&ndash; <h3>Map columns</h3> &ndash;&gt;-->
+                      <!--</div>-->
+                      <!--<div class="col-xs-12 plr-0">-->
+                        <!--<div id="excel_table"  class="table-responsive">-->
+                          <!--<table id="excel" class="table pl-25px pr-25px table-striped table-hover" >-->
+                            <!--<thead id="heading">-->
+
+
+                            <!--</thead>-->
+                            <!--<tbody id="tbody">-->
+
+                            <!--</tbody>-->
+                          <!--</table>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="col-xs-12 plr-0 hide " id="divisRowTimePeriod">-->
+                            <!--&lt;!&ndash; <input name="isRowTimePeriod" id="isRowTimePeriod" type="checkbox">-->
+                          <!--Do data column headers contain time periods?  &ndash;&gt;-->
+
+
+
+                      <!--<div class="col-xs-12 text-center mb-3 ">-->
+                        <!--<hr>-->
+                        <!--<button class="btn btn-grey btn-border mr-mb-3 " onclick="javascript:backGetMappingData()">Previous</button>-->
+                        <!--<button class="btn btn-red" onclick="javascript:getMappingData()">Next</button>-->
+                      <!--</div>-->
+                       <!--</div>-->
+                    <!--</section>-->
+
+
+                    <!--<section class="mydata_3 clearfix mydata_all hide" id="show_data" >-->
+                      <!--<div class="col-xs-12 plr-0 mb-3">-->
+                        <!--&lt;!&ndash; <h3>Map Areas</h3> &ndash;&gt;-->
+                      <!--</div>-->
+                      <!--<div class="col-xs-12 plr-0">-->
+                        <!--<div  class="table-responsive">-->
+                          <!--<table class="table pl-25px pr-25px table-striped table-hover">-->
+                            <!--<thead id="show_data_heading">-->
+                              <!--<tr>-->
+                                <!--<th>My Data</th>-->
+                                <!--<th>Database</th>-->
+                              <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody id="show_data_tbody">-->
+
+                            <!--</tbody>-->
+                          <!--</table>-->
+                          <!--&lt;!&ndash; <input name="isRowTimePeriod" id="isRowTimePeriod" type="checkbox">-->
+                          <!--Use Map Server &ndash;&gt; </div>-->
+                      <!--</div>-->
+                      <!--<div class="col-xs-12 text-center mb-3">-->
+                        <!--<hr>-->
+                        <!--<button class="btn btn-grey btn-border mr-mb-3" id="map_areas_back" >Previous</button>-->
+                        <!--<button class="btn btn-red" id="show_my_map">Next</button>-->
+                      <!--</div>-->
+                    <!--</section>-->
+
+                    <section id="chartContainer" class="mydata_all"></section>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <!-- <a href="http://www.xoinfo.org/download/csv"><button type="button" id="downloadCsv">Download CSV</button></a> -->
+
+<!--tree dropdown-->
+  <div class="modal modal-1 fade" id="myAreaData" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Select Area</h4>
+        </div>
+        <div class="modal-body">
+        <div class="">
+          <!-- <div class="row">
+
+            <div class="col-md-12">
+              <div id="custom-search-input" class="search_div">
+                <div class="input-group">
+                  <input class="form-control" placeholder="Search" type="text">
+                  <span class="input-group-btn"><img src="http://www.xoinfo.org/front/lib/images/search.png" alt="search"></span>
+                </div>
+              </div>
+            </div>
+          </div> --><!-- /.row -->
+          <!-- <div id="menu-list" class="menu-list">
+            <ul id="sector-tab" class="root static" style="display: block;">
+
+              <li class="dir"> Crime
+                <ul style="display: block;">
+                  <li class="dir"> Murder
+                  <ul style="display: block;">
+                    <li class="dir"> Number of cases of killings of journalists and associated media personnel, Number
+                      <ul style="display: block;">
+                        <li class="subgroup" data-value="5a3a09ba9657d31f6efe2664">Total</li>
+                      </ul>
+                    </li>
+                    <li class="dir"> Number of victims of intentional homicide per 100,000 population, Per 100,000 population
+                      <ul>
+                        <li class="subgroup" data-value="5a3a09ba9657d31f6efe25da">Total</li>
+                      </ul>
+                    </li>
+                    <li class="dir"> Number of victims of intentional homicide, Number
+                      <ul>
+                        <li class="subgroup" data-value="5a3a09ba9657d31f6efe25e2">Total</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  </li>
+                  <li class="dir"> Prison
+                  <ul>
+                    <li class="dir"> Unsentenced detainees as a proportion of overall prison population, Percent
+                      <ul>
+                        <li class="subgroup" data-value="5a3a09b29657d31f6efe1533">Total</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  </li>
+                </ul>
+              </li>
+
+
+
+
+            </ul>
+
+
+          </div> --><!-- /#menu-list -->
+
+
+
+
+
+
+                  <ul class="list-group" id="modal_all_area22" style="overflow:  auto;max-height:  200px;">
+                  </ul>
+
+
+
+
+
+
+        </div><!-- /.dropdown-menu1 -->
+      </div>
+      </div>
+
+    </div>
+  </div>
+<!--download template csv-->
+  <div class="modal modal-1 fade" id="csv_download" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create, Save and Upload your CSV format</h4>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+        <div class="col-xs-12"><p class="fo-12">In order to generate data visualizations from you own data you need to upload the data here, in CSV file format. This data needs to follow the XoInfo data structure called (DIET). You may download the DIET template can be downloaded from the following link, Download CSV data template..</p>
+<img class="w-100" src="http://www.xoinfo.org/front/lib/images/mydata_tablr_data.png" >
+</div>
+<div class="col-xs-12"><div class="no-background"><span>or</span></div></div>
+<div class="col-xs-12 "><button class="btn btn-red center-block">Downlad sample.csv</button></div>
+      </div></div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+<!-- <script src="http://www.xoinfo.org/front/lib/js/state.js"></script> -->
+<script src="http://www.xoinfo.org/front/lib/js/world_2006.js"></script>
+
+     <script >
+            var s = '';
+            $('#questionList').change(function(){
+
+                  var value = $(this).val();
+                    $.ajax({
+                    url: 'http://localhost:8000/table/get-form-questions',
+                    type: 'POST',
+                    data: { csrfmiddlewaretoken: "{{ csrf_token }}",'flow': value},
+                    dataType: 'json',
+                    success: function (response) {
+                    s = '<option>--Select Question--</option>';
+                    for(var i=0; i < response.length; i++){
+
+
+                         s += "<option >"+response[i].fields.label+"</option>";
+                    }
+                        $('#List').html(s);
+                    },
+                      error: function (data) {
+
+                        }
+                        });
+
+            });
+
+            $('#List').on('change', function() {
+                var flowid = $('#questionList').val();
+                var value = $(this).val();
+               $.ajax({
+                    url: 'http://localhost:8000/table/get-form-questions-choice',
+                    type: 'POST',
+                    data: { csrfmiddlewaretoken: "{{ csrf_token }}",'flow': flowid,'question':value},
+                    dataType: 'json',
+                    success: function (response) {
+
+                        }
+                        });
+            });
+
+             $('.display').on('click', function() {
+                var flowid = $('#questionList').val();
+                var value = $(List).val();
+               $.ajax({
+                    url: 'http://localhost:8000/table/get-form-questions-choice',
+                    type: 'POST',
+                    data: { csrfmiddlewaretoken: "{{ csrf_token }}",'flow': flowid,'question':value},
+                    dataType: 'json',
+                    success: function (response) {
+
+
+
+                        $table = "<table id='table' >";
+                         $table += "<thead><tr><th>Choice</th><th>Total</th></tr></thead>";
+                         $table += "<tbody>";
+                        $.each(response, function(val) {
+
+                          $.each(this, function(k, v) {
+                             $table += "<tr><td>"+k+"</td><td>"+v+"</td></tr>";
+                          });
+                        });
+                        $table += "</tbody>";
+                        $table += "</table>";
+                        $('#viz1').html($table);
+                        $('#viz1').show();
+                    },
+                      error: function (data) {
+
+                        }
+                        });
+            });
+
+$('.loadchart').on('click',function(){
+$('#viz1').hide();
+$charttype = $(this).data('charttype');
+   Highcharts.chart('viz', {
+    data: {
+        table: 'table'
+    },
+    chart: {
+        type: $charttype
+    },
+    title: {
+        text: 'Visualization of data of Rapid Flow'
+    },
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Units'
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.point.y + ' ' + this.point.name.toLowerCase();
+        }
+    }
+});
+});
+
+
+</script>
+</body>
+</html>
